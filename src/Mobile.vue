@@ -101,7 +101,7 @@ html{
 .resumeEditor{
   padding: 2em;
 }
-.resumeEditor h2{
+.resumeEditor h3{
   display: inline-block;
   border-bottom: 1px solid;
   margin: 1em 0 .5em;
@@ -128,36 +128,44 @@ html{
 }
 `],
         currentMarkdown: '',
-        fullMarkdown: `方应杭
+        fullMarkdown: `孙燕倩
 ----
 
-资深前端工程师，资深前端讲师
-现在在 [饥人谷](http://jirengu.com) 教前端课程。
+意向职位：前端工程师
 
-技能
+联系方式
+----
+手机：13060769093   邮箱：sunyan7@mail.ustc.edu.cn
+
+学历背景
+----
+华南师范大学      软件工程  本科
+中国科学技术大学  电子信息  硕士
+
+技能描述
 ----
 
 * 前端开发
 * Rails 开发
 * Node.js 开发
-* 前端授课
+* vue 开发
 
-工作经历
+实习经历
+----
+腾讯视频搜索技术中心 2021/8 - 2021/3
+
+项目经历
+----
+* http多路由切换 已全量上线
+* 参与腾讯视频9.0改版
+
+博客地址
 ----
 
-1. [饥人谷](http://jirengu.com)
-2. 腾讯即时通讯平台部
-3. 阿里巴巴B2B部门
-4. 彩程知人项目组
+* [GitHub](https://github.com/aLittleSevenCat)
+* [我的博客](https://blog.csdn.net/weixin_41950078)
 
-链接
-----
-
-* [GitHub](https://github.com/frankfang)
-* [我的文章](https://www.zhihu.com/people/zhihusucks/pins/posts)
-
-> 如果你喜欢这个效果，
-Fork [我的项目](https://github.com/jirengu-inc/animating-resume)，打造你自己的简历！
+> 如果您觉得合适，请与我联系
 
 `
       }

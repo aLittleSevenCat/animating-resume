@@ -22,8 +22,7 @@
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
-          `/*
-* Inspired by http://strml.net/
+`/*
 * 你好，我叫孙燕倩
 * 这是我准备的一份动态小简历
 */
@@ -38,11 +37,11 @@ html {
 }
 /* 文字离边框太近了 */
 .styleEditor {
-  padding: .5em;
-  border: 1px solid;
+  padding: 1em;
+  border: 2px solid;
   margin: .5em;
   overflow: auto;
-  width: 45vw; height: 90vh;
+  width: 40vw; height: 88vh;
 }
 /* 代码高亮 */
 .token.selector{ color: rgb(133,153,0); }
@@ -52,7 +51,7 @@ html {
 
 /* 加点 3D 效果呗 */
 html{
-  perspective: 1000px;
+  perspective: 800px;
 }
 .styleEditor {
   position: fixed; left: 0; top: 0;
@@ -66,7 +65,7 @@ html{
 .resumeEditor{
   position: fixed; right: 0; top: 0;
   padding: .5em;  margin: .5em;
-  width: 48vw; height: 90vh;
+  width: 55vw; height: 95vh;
   border: 1px solid;
   background: white; color: #222;
   overflow: auto;
@@ -108,8 +107,10 @@ html{
   margin-right: .5em;
 }
 .resumeEditor blockquote {
-  margin: 1em;
-  padding: .5em;
+  margin: 1.5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  text-align: center;
   background: #ddd;
 }
 `],
@@ -119,14 +120,18 @@ html{
 
 意向职位：前端工程师
 
-学历
+联系方式
 ----
-华南师范大学     软件工程  本科
-中国科学技术大学 电子信息  硕士
+*手机：13060769093   
+*邮箱：sunyan7@mail.ustc.edu.cn
 
-技能
+学历背景
 ----
+*华南师范大学       软件工程  本科
+*中国科学技术大学   电子信息  硕士
 
+技能描述
+----
 * 前端开发
 * Rails 开发
 * Node.js 开发
@@ -138,16 +143,16 @@ html{
 
 项目经历
 ----
-http多路由切换 已全量上线
-参与腾讯视频9.0改版
+* http多路由切换 已全量上线
+* 参与腾讯视频9.0改版
 
-链接
+博客地址
 ----
 
 * [GitHub](https://github.com/aLittleSevenCat)
 * [我的博客](https://blog.csdn.net/weixin_41950078)
 
-> 如果您觉得合适，请给我面试机会，感谢！
+> 如果您觉得合适，请与我联系
 
 `
       }
@@ -180,10 +185,10 @@ http多路由切换 已全量上线
             let length = this.fullStyle.filter((_, index) => index <= n).map((item) => item.length).reduce((p, c) => p + c, 0)
             let prefixLength = length - style.length
             if (this.currentStyle.length < length) {
-              let l = this.currentStyle.length - prefixLength
-              let char = style.substring(l, l + 1) || ' '
+              let len = this.currentStyle.length - prefixLength
+              let char = style.substring(len, len + 1) || ' '
               this.currentStyle += char
-              if (style.substring(l - 1, l) === '\n' && this.$refs.styleEditor) {
+              if (style.substring(len - 1, len) === '\n' && this.$refs.styleEditor) {
                 this.$nextTick(() => {
                   this.$refs.styleEditor.goBottom()
                 })
@@ -226,6 +231,7 @@ http多路由切换 已全量上线
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+ 
   }
 
   html {
